@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap'
 </script>
 <script lang="ts">
 import { defineComponent } from 'vue';
