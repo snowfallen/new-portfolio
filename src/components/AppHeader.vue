@@ -1,12 +1,12 @@
 <template>
-  <header>
+  <header style="height: 2000px">
     <div id="top-nav">
-      <menu class="d-none d-md-block">
-        <ul class="d-flex justify-content-center">
-          <li class="p-2"><a>Home</a></li>
-          <li class="p-2"><a>Skills</a></li>
-          <li class="p-2"><a>Experience</a></li>
-          <li class="p-2"><a>Contact</a></li>
+      <menu class="header__nav d-none d-md-block">
+        <ul class="header__ul d-flex justify-content-center">
+          <li class="header__li"><a class="header__a" href="#wellcome">Wellcome</a></li>
+          <li class="header__li"><a class="header__a" href="#skills">Skills</a></li>
+          <li class="header__li"><a class="header__a" href="#experience">Experience</a></li>
+          <li class="header__li"><a class="header__a" href="#contact">Contact</a></li>
         </ul>
       </menu>
       <div class="nav-menu" :class="{ open: isMenuOpen }">
@@ -48,10 +48,12 @@ export default defineComponent({
 
 
 <style lang="scss" scoped>
+header {
+  position: fixed;
+}
 h1 {
   margin: 0;
   padding: 18px 20px;
-  font-family: 'Open Sans', Helvetica;
   font-size: 30px;
 }
 p {
@@ -64,6 +66,7 @@ p {
 ul {
   list-style-type: none;
   padding: 0;
+  margin: 10px 0 0 0;
 }
 a {
   cursor: pointer;
@@ -71,8 +74,8 @@ a {
 #top-nav {
   position: fixed;
   width: 100%;
-  height: 70px;
-  background: #fff;
+  height: 60px;
+  background: rgba(17, 8, 37, 0.97);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.14),0px 0px 5px rgba(0, 0, 0, 0.14);
 }
 .nav-menu {
@@ -99,7 +102,6 @@ a {
 .menu-list {
   margin-top: 100px;
   text-align: center;
-  font-family: 'Open Sans', Helvetica;
   font-size: 30px;
   opacity: 0;
 }
@@ -136,8 +138,6 @@ li .social-icons:hover {
   margin: 18px;
   color: #fff;
 }
-
-/* Burger */
 #burger-wrap {
   position: fixed;
   top: 0;
@@ -149,7 +149,7 @@ li .social-icons:hover {
 }
 .burger {
   position: fixed;
-  top: 9px;
+  top: 0;
   right: 15px;
   overflow: hidden;
   cursor: pointer;
@@ -170,7 +170,7 @@ li .social-icons:hover {
   left: 16px;
   right: 16px;
   height: 3px;
-  background: #5833dd;
+  background: hsl(261deg 80% 90%);
   border-radius: 15px;
   -webkit-transition: background 0.3s .3s;
   transition: background 0.3s .3s;
@@ -194,7 +194,7 @@ li .social-icons:hover {
   left: 0;
   width: 100%;
   height: 3px;
-  background: #5833dd;
+  background: hsl(261deg 80% 90%);
   content: "";
   border-radius: 5px;
   -webkit-transition-duration: .3s,.3s;
@@ -230,6 +230,62 @@ li .social-icons:hover {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
+}
+
+a {
+  color: hsl(261deg 70% 80%);
+}
+
+.header__ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.header__li {
+  position: relative;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.header__a {
+  display: block;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  text-decoration: none;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  border-radius: inherit;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__a::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-start: -100%;
+  block-size: 100%;
+  inline-size: 100%;
+  background: hsl(261deg 80% 90%);
+  z-index: -1;
+  transition: all 0.2s ease-in-out;
+}
+
+.header__a:hover {
+  color: hsl(302deg 70% 5% / 90%);
+}
+
+.header__a:hover::before {
+  inset-block-start: 0;
+  inset-inline-start: 0;
+}
+
+.header__li:has(+ li:hover) .header__a::before {
+  inset-inline-start: 100%;
 }
 /* Disable scrollbar on Chrome and Safari browsers! */
 html::-webkit-scrollbar { width: 0 !important; height: 0 !important; }
