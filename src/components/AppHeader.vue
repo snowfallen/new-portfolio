@@ -12,10 +12,10 @@
       <div class="nav-menu" :class="{ open: isMenuOpen }">
         <div class="menu-list" :class="{ 'list-open': isMenuOpen }">
           <ul>
-            <li><a>Home</a></li>
-            <li><a>Skills</a></li>
-            <li><a>Experience</a></li>
-            <li><a>Contact</a></li>
+            <li><a @click="toggleMenu" href="#welcome">Home</a></li>
+            <li><a @click="toggleMenu" href="#skills">Skills</a></li>
+            <li><a @click="toggleMenu" href="#experience">Experience</a></li>
+            <li><a @click="toggleMenu" href="#contact">Contact</a></li>
           </ul>
         </div>
         <div id="burger-wrap">
@@ -41,6 +41,9 @@ export default defineComponent({
   methods: {
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    closeMenu() {
+      this.isMenuOpen  = false
     }
   }
 })
@@ -70,6 +73,7 @@ ul {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 #top-nav {
   position: fixed;
@@ -104,6 +108,10 @@ a {
   text-align: center;
   font-size: 30px;
   opacity: 0;
+  display: none;
+}
+.menu-list.list-open {
+  display: block;
 }
 .list-open {
   opacity: 1;
