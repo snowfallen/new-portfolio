@@ -3,7 +3,7 @@
     <div id="top-nav">
       <menu class="header__nav d-none d-md-block">
         <ul class="header__ul d-flex justify-content-center">
-          <li class="header__li"><a class="header__a" href="#wellcome">Wellcome</a></li>
+          <li class="header__li"><a class="header__a" href="#welcome">Welcome</a></li>
           <li class="header__li"><a class="header__a" href="#skills">Skills</a></li>
           <li class="header__li"><a class="header__a" href="#experience">Experience</a></li>
           <li class="header__li"><a class="header__a" href="#contact">Contact</a></li>
