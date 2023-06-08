@@ -53,6 +53,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 header {
   position: fixed;
+  z-index: 9999;
 }
 h1 {
   margin: 0;
