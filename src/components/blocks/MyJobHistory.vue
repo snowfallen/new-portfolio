@@ -1,5 +1,5 @@
 <template>
-
+  <div class="skill">PHP</div>
 </template>
 
 <script lang="ts">
@@ -8,6 +8,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

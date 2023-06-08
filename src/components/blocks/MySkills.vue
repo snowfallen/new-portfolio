@@ -1,34 +1,52 @@
 <template>
   <div id="skills">
-    <div class="ball" ref="ball1Ref" :style="{ top: ball1Top + 'px', left: ball1Left + 'px' }">PHP</div>
-    <div class="ball" ref="ball2Ref" :style="{ top: ball2Top + 'px', left: ball2Left + 'px' }">Laravel</div>
+    <h1>My Skills</h1>
+    <div class="container">
+      <MySkill
+          v-for="skill in skills"
+          :key="skill"
+          :skill="skill"
+      />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent} from "vue";
+import {defineComponent} from "vue";
+import MySkill from "@/components/blocks/MySkill.vue";
 
+type Skills = {
+  skills: string[]
+}
 export default defineComponent({
   name: "MySkills",
+  components: {MySkill},
+  data(): Skills {
+    return {
+      // skills: ['PHP', 'JS', 'Laravel', 'Vue', 'SQL', 'NoSQL', 'Git', 'Jira', 'Docker', 'Symfony', 'React', 'TS', 'ApacheSolr', 'AWS', 'HTML', 'CSS', 'SCSS'],
+      skills: ['PHP', 'JS'],
+    }
+  },
 })
 </script>
 
 <style scoped lang="scss">
 #skills {
-  position: relative;
-  width: 500px;
-  height: 500px;
+  width: 100vw;
+  height: 100vh;
   border: 1px solid black;
-
-  .ball {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: red;
+  h1 {
+    text-align: center;
+  }
+  .container {
+    height: 50%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 }
 </style>
