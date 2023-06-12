@@ -33,7 +33,7 @@ export default defineComponent({
 <style scoped lang="scss">
 #skills {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   h1 {
     text-align: center;
   }
