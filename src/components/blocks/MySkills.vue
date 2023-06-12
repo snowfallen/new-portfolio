@@ -1,7 +1,7 @@
 <template>
   <div id="skills">
     <h1>My Skills</h1>
-    <div class="container">
+    <div class="container" ref="container">
       <MySkill
           v-for="skill in skills"
           :key="skill"
@@ -23,8 +23,8 @@ export default defineComponent({
   components: {MySkill},
   data(): Skills {
     return {
-      // skills: ['PHP', 'JS', 'Laravel', 'Vue', 'SQL', 'NoSQL', 'Git', 'Jira', 'Docker', 'Symfony', 'React', 'TS', 'ApacheSolr', 'AWS', 'HTML', 'CSS', 'SCSS'],
-      skills: ['PHP', 'JS'],
+      skills: ['PHP', 'JS', 'Laravel', 'Vue', 'SQL', 'NoSQL', 'Git', 'Jira', 'Docker', 'Symfony', 'React', 'TS', 'Solr', 'AWS', 'HTML', 'CSS', 'SCSS', 'TDD'],
+      // skills: ['PHP', 'JS'],
     }
   },
 })
@@ -34,7 +34,6 @@ export default defineComponent({
 #skills {
   width: 100vw;
   height: 100vh;
-  border: 1px solid black;
   h1 {
     text-align: center;
   }
@@ -43,10 +42,14 @@ export default defineComponent({
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+  .skills {
     position: relative;
     top: 0;
     left: 0;
     z-index: 1;
+    width: 120px;
+    height: 120px;
   }
 }
 </style>

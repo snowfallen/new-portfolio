@@ -1,5 +1,7 @@
 <template>
+  <div class="skills">
     <div class="skill" ref="skill">{{ skill }}</div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -25,8 +27,8 @@ export default defineComponent({
         dataMoving: {
           x: this.getRandomIntInclusive(0, 50),
           y: this.getRandomIntInclusive(0, 50),
-          vx: this.getRandomIntInclusive(-3, 3),
-          vy: this.getRandomIntInclusive(-3, 3)
+          vx: this.getRandomIntInclusive(-1.5, 1.5),
+          vy: this.getRandomIntInclusive(-1.5, 1.5)
         }
       }
   },
@@ -49,35 +51,7 @@ export default defineComponent({
       }
       skill.style.left = this.dataMoving.x + 'px';
       skill.style.top = this.dataMoving.y + 'px';
-      // setTimeout(this.updateBalls, 100);
-    },
-    checkCollision(skill: HTMLDivElement, dataMoving: { x: number; y: number; vx: number; vy: number }, skill2: HTMLDivElement, dataMoving2: { x: number; y: number; vx: number; vy: number }) {
-      // const dx = dataMoving2.dataMoving.x - dataMoving.dataMoving.x;
-      // const dy = dataMoving2.dataMoving.y - dataMoving.dataMoving.y;
-      // const distance = Math.sqrt(dx * dx + dy * dy);
-      //
-      // if (distance < skill.offsetWidth / 2 + skill2.offsetWidth / 2) {
-      //   const normalX = dx / distance;
-      //   const normalY = dy / distance;
-      //
-      //   const midpointX = (dataMoving.dataMoving.x + dataMoving2.dataMoving.x) / 2;
-      //   const midpointY = (dataMoving.dataMoving.y + dataMoving2.dataMoving.y) / 2;
-      //
-      //   const reflectX1 = dataMoving.dataMoving.vx - 2 * (dataMoving.dataMoving.vx * normalX + dataMoving.dataMoving.vy * normalY) * normalX;
-      //   const reflectY1 = dataMoving.dataMoving.vy - 2 * (dataMoving.dataMoving.vx * normalX + dataMoving.dataMoving.vy * normalY) * normalY;
-      //   const reflectX2 = dataMoving2.dataMoving.vx - 2 * (dataMoving2.dataMoving.vx * normalX + dataMoving2.dataMoving.vy * normalY) * normalX;
-      //   const reflectY2 = dataMoving2.dataMoving.vy - 2 * (dataMoving2.dataMoving.vx * normalX + dataMoving2.dataMoving.vy * normalY) * normalY;
-      //
-      //   dataMoving.dataMoving.vx = reflectX1;
-      //   dataMoving.dataMoving.vy = reflectY1;
-      //   dataMoving2.dataMoving.vx = reflectX2;
-      //   dataMoving2.dataMoving.vy = reflectY2;
-      //
-      //   dataMoving.dataMoving.x = midpointX - skill.offsetWidth / 2 * normalX;
-      //   dataMoving.dataMoving.y = midpointY - skill.offsetHeight / 2 * normalY;
-      //   dataMoving2.dataMoving.x = midpointX + skill2.offsetWidth / 2 * normalX;
-      //   dataMoving2.dataMoving.y = midpointY + skill2.offsetHeight / 2 * normalY;
-      // }
+      setTimeout(this.updateBalls, 100);
     },
     getRandomIntInclusive(min: number, max: number): number {
       min = Math.ceil(min);
@@ -95,13 +69,15 @@ export default defineComponent({
 .skill {
   z-index: 1;
   position: absolute;
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
-  background-color: red;
+  background: #5833dd;
+  color: azure;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: default;
   transition: 0.1s;
   top: 0;
   left: 0;
