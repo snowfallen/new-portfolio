@@ -34,6 +34,7 @@ export default defineComponent({
 #skills {
   width: 100vw;
   height: 100%;
+  padding-top: 70px;
   h1 {
     text-align: center;
   }
