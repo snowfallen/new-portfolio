@@ -1,10 +1,30 @@
 <template>
-<footer></footer>
+<footer>
+  <div class="container" id="contact">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+        <span class="mb-3 mb-md-0 text-muted">OB</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/oleksandr-bondarenko-snowfall/">
+          <font-awesome-icon icon="fa-brands fa-linkedin" size="xl"/>
+        </a></li>
+        <li class="ms-3"><a class="text-muted" href="https://github.com/snowfallen">
+          <font-awesome-icon icon="fa-brands fa-github" size="xl"/>
+        </a></li>
+      </ul>
+    </footer>
+  </div>
+</footer>
 </template>
 
 <script lang="ts">
 export default {
-  name: "AppFooter"
+  name: "AppFooter",
 }
 </script>
 

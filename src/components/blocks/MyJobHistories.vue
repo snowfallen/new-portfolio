@@ -1,7 +1,6 @@
 <template>
   <div id="experience">
     <div class="container mb-5">
-      <h1 class="text-center">My Work Experience</h1>
       <nav>
         <menu>
           <li @click="this.changeSlide(0)" class="nav-item">
@@ -163,14 +162,15 @@ nav {
 nav menu {
   display: flex;
   justify-content: center;
+  border-bottom: 1px solid #4a33dd;
 }
 
 nav menu li {
   font-size: 20px;
   padding: 10px;
   cursor: pointer;
+  border: 0;
 }
-
 .exp {
   width: 100%;
   height: 90%;
