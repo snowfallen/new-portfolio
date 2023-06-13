@@ -2,6 +2,7 @@
 node_modules
 /dist
 
+vue.config.js
 
 # local env files
 .env.local
