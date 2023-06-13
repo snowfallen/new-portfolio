@@ -1,5 +1,5 @@
 <template>
-  <header style="height: 2000px">
+  <header>
     <div id="top-nav">
       <menu class="header__nav d-none d-md-block">
         <ul class="header__ul d-flex justify-content-center">

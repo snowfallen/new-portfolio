@@ -23,7 +23,4 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.wrapper {
-  padding-top: 65px;
-}
 </style>
