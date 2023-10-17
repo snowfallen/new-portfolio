@@ -29,6 +29,7 @@
 <script lang="ts">
 import {defineComponent} from "vue";
 import MyJobHistory from "@/components/blocks/MyJobHistory.vue";
+
 interface Experience {
   titles: string;
   baseInfos: string;
@@ -40,6 +41,7 @@ interface Experience {
 interface Experiences {
   experiences: Experience[];
 }
+
 export default defineComponent({
   name: "MyJobHistories",
   components: {
@@ -50,40 +52,49 @@ export default defineComponent({
     return {
       experiences: [
         {
-          titles:'Junior Full Stack Developer',
+          titles: 'Full Stack Developer',
           baseInfos: 'ETER-MED · Full-time Oct 2022 - Jul 2023 · Gdańsk, Pomorskie, Poland',
-          experienceSummary: 'Designed and created a web application for clinic staff by Laravel and Vue.js:',
+          experienceSummary: 'Designed, created and updated a web applications for clinic staff by Laravel and Vue.js:',
           experienceDescription: [
-              ['Designed UI , UX, database and tables for project, developed Frontend and Backend, implement' +
-              'cloud uploading functionality, added searching files, articles and category possibility by' +
-              'Apache Solr, created a docker-compose file for my project, ran project in Jenkins.'],
-              ['Modified the several projects by adding new features.'],
-              ['Created the images with Docker Compose for our projects.'],
-              ['Supported old projects.'],
-              ['Engaged in code review.']
+            ['Created a robust web application using Laravel and Vue.js tailored for clinic staff, enhancing their workflow efficiency. '],
+            ['Implemented cloud uploading functionality for file storage and retrieval.'],
+            ['Integrated Apache Solr to enable efficient searching of files, articles, and categories.'],
+            ['Wrote Bash scripts to expedite developer tasks.'],
+            ['Utilized Docker and created a docker-compose files for seamless projects deployment. '],
+            ['Configured and ran the projects in Jenkins for automated builds and deployments. '],
+            ['Streamlined the email delivery process to enhance website speed and performance.'],
+            ['Contributed to multiple projects by implementing new features and enhancements. '],
+            ['Provided ongoing support and maintenance for legacy projects.'],
+            ['Actively participated in code reviews to ensure code quality and adherence to best practices.']
           ],
           skills: 'PHP · JavaScript · Laravel · Vue.js · Git · Docker · Jenkins · Front-End Development · Back-End Web Development · Agile Methodologies · Remote Teamwork · Visual Communication · Scrum · AJAX · MySQL · Object-Oriented Programming (OOP) · Cascading Style Sheets (CSS) · HTML · SQL · Bootstrap · Apache Solr · HTML5 · jQuery',
         },
         {
-          titles: 'Intern Backend Developer',
+          titles: 'Backend Developer',
           baseInfos: 'Deosite / creating desire · Full-time Jan 2022 - Sep 2022 · Gdańsk, Pomorskie, Poland',
           experienceSummary: 'Engaged in the development and modification of online stores:',
           experienceDescription: [
-              ['Created a Magento 2 module to simplify the work of the admin with discount coupons'],
-              ['Made the email templates for Magento 2.'],
-              ['Modifieded a Magento 2 module for delivery and shipping'],
-              ['Created more than 100 new products templates to eBay shop using M2E Pro plugin for Magento 2'],
-              ['Created a simple Symfony Controllers , Helpers, Twig templates and other components']
+            ['Developed Symfony controllers, helpers, twig templates, and other components. '],
+            ['Developed a custom Magento 2 module to streamline the administration of discount coupons, simplifying the workflow. '],
+            ['Modified an existing module for delivery and shipping to meet specific business requirements.'],
+            ['Utilized the M2E Pro plugin to create over 100 new product templates for the eBay shop, optimizing the listing process. '],
+            ['Collaborated with the team to gather requirements, implement new features, and troubleshoot issues.'],
+            ['Engaged in the planning phase to acquire a comprehensive understanding of the project\'s requirements and objectives.']
           ],
           skills: 'PHP · JavaScript · Symfony Framework · Git · Docker · Front-End Development · Back-End Web Development · Agile Methodologies · Remote Teamwork · Visual Communication · Written Communication · Scrum · AJAX · MySQL · Object-Oriented Programming (OOP) · Cascading Style Sheets (CSS) · HTML · SQL · Magento 2 · jQuery'
         },
         {
-          titles: 'Freelance Programmer',
-          baseInfos: 'Freelance May 2021 - Oct 2022',
+          titles: 'Freelance Full-Stack Developer',
+          baseInfos: 'Freelance May 2020 - Oct 2022',
           experienceSummary: 'Made many different web projects:',
           experienceDescription: [
-              ['Converted from figma , psd and other formats into semantic, accessible and valid HTML templates with HTML5, CSS3 (SCSS) and JS'],
-              ['Created a backend with PHP and built a full featured web app with Laravel + Vue.js']
+            ['Translated designs from Figma, PSD, and other formats into semantic, accessible, and valid HTML templates using HTML5, CSS3 (SCSS), and JavaScript.'],
+            ['Developed a robust backend using PHP and utilized Laravel and Vue.js to build a full-featured web application.'],
+            ['Designed and implemented the frontend and backend components to deliver a seamless user experience.'],
+            ['Integrated various APIs and third-party services to enhance the functionality of the application.'],
+            ['Implemented authentication and authorization mechanisms to ensure data security and user privacy.'],
+            ['Optimized application performance and scalability through efficient database design and query optimization techniques.'],
+            ['Conducted thorough testing and debugging to ensure the application\'s stability and reliability.']
           ],
           skills: 'PHP · JavaScript · Laravel · Vue.js · Git · Docker · Jenkins · Front-End Development · Back-End Web Development · Remote Teamwork · Written Communication · AJAX · MySQL · Cascading Style Sheets (CSS) · HTML · SQL · Gulp.js · Scss · Bootstrap · SASS · HTML5 · jQuery',
         },
@@ -92,10 +103,13 @@ export default defineComponent({
           baseInfos: 'AUTO COOPERATIVE "Promin" · Full-time Jan 2016 - Jun 2018 · Cherkasy, Cherkasy, Ukraine',
           experienceSummary: 'Administration of computers and Internet networks:',
           experienceDescription: [
-              ['Brought fibre to residential buildings'],
-              ['Connected the clients\' computer to the using PPPoE'],
-              ['Engaged in administration of computers with Linux and Windows operating systems.'],
-              ['Set up the clients\' computer']
+            ['Implemented of fiber optic connectivity in residential buildings, bringing high-speed internet access to residents.'],
+            ['Configured and established PPPoE connections on clients\' computers, enabling them to connect to the fiber optic network.'],
+            ['Provided comprehensive setup and configuration services for clients\' computers, ensuring optimal performance and functionality.'],
+            ['Administered and maintained computers running Linux and Windows operating systems, addressing technical issues and ensuring smooth operations.'],
+            ['Conducted troubleshooting and diagnostic tasks to resolve hardware and software issues, ensuring minimal downtime.'],
+            ['Assisted clients in software installations, updates, and configuration adjustments to meet their specific requirements.'],
+            [' Provided technical support and guidance to clients, resolving technical inquiries and issues in a professional and efficient manner.']
           ],
           skills: 'Visual Communication · Cascading Style Sheets (CSS) · HTML · SQL · Linux · Network Administration · System Administration · Computer Hardware · Transmission Control Protocol (TCP) · Windows · Internet Protocol Suite (TCP/IP) · PPPoE'
         }
@@ -140,6 +154,7 @@ export default defineComponent({
   text-decoration: none;
   list-style: none;
 }
+
 #experience {
   width: 100vw;
   height: 100%;
@@ -147,6 +162,7 @@ export default defineComponent({
   display: flex;
   padding-top: 150px;
 }
+
 .container {
   width: 100%;
   height: 100%;
@@ -166,11 +182,12 @@ nav menu {
 }
 
 nav menu li {
-  font-size: 20px;
+  font-size: 100%;
   padding: 10px;
   cursor: pointer;
   border: 0;
 }
+
 .exp {
   width: 100%;
   height: 90%;
@@ -187,9 +204,11 @@ nav menu li {
   padding: 20px;
   min-width: 100%;
 }
+
 .nav-item {
   transition: 0.6s;
 }
+
 .active {
   color: mediumpurple;
   transition: 0.6s;
