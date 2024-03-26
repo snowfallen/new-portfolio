@@ -53,7 +53,7 @@ export default defineComponent({
       experiences: [
         {
           titles: 'Full Stack Developer',
-          baseInfos: 'ETER-MED · Full-time Oct 2022 - Jul 2023 · Gdańsk, Pomorskie, Poland',
+          baseInfos: 'ETER-MED · 09.2022 - 08.2023 · Gdańsk, Pomorskie, Poland',
           experienceSummary: 'Designed, created and updated a web applications for clinic staff by Laravel and Vue.js:',
           experienceDescription: [
             ['Created a robust web application using Laravel and Vue.js tailored for clinic staff, enhancing their workflow efficiency. '],
@@ -71,7 +71,7 @@ export default defineComponent({
         },
         {
           titles: 'Backend Developer',
-          baseInfos: 'Deosite / creating desire · Full-time Jan 2022 - Sep 2022 · Gdańsk, Pomorskie, Poland',
+          baseInfos: 'Deosite / creating desire · 02.2021 - 09.2022 · Gdańsk, Pomorskie, Poland',
           experienceSummary: 'Engaged in the development and modification of online stores:',
           experienceDescription: [
             ['Developed Symfony controllers, helpers, twig templates, and other components. '],
@@ -85,7 +85,7 @@ export default defineComponent({
         },
         {
           titles: 'Freelance Full-Stack Developer',
-          baseInfos: 'Freelance May 2020 - Oct 2022',
+          baseInfos: 'Freelance 05.2020 - 09.2021 | 07.2023 - present',
           experienceSummary: 'Made many different web projects:',
           experienceDescription: [
             ['Translated designs from Figma, PSD, and other formats into semantic, accessible, and valid HTML templates using HTML5, CSS3 (SCSS), and JavaScript.'],
